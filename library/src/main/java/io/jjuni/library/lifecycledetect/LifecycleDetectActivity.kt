@@ -1,7 +1,7 @@
 package io.jjuni.library.lifecycledetect
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * Created by Jo on 2018. 10. 11.
@@ -41,11 +41,11 @@ open class LifecycleDetectActivity : AppCompatActivity() {
         notifyEvent(LifecycleEvent.ON_DESTROYED)
     }
 
-    open fun register(callback : LifecycleCallback) {
+    fun register(callback : LifecycleCallback) {
         lifecycleOwner.register(callback)
     }
 
-    open fun unregister(callback : LifecycleCallback) {
+    fun unregister(callback : LifecycleCallback) {
         lifecycleOwner.unregister(callback)
     }
 
